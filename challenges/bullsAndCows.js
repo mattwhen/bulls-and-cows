@@ -2,7 +2,7 @@
 // Outputs: String
 // write a function that iterates over the secret and the guess
 function getHint(secret, guess) {
-    
+
     let cows = 0;
     let bulls = 0;
     // Create a map to track the frequency of each character in both "guess" and "secret".
@@ -26,9 +26,10 @@ function getHint(secret, guess) {
         map[guestChar] = parseInt(map[guestChar] || 0) - 1;
     }
    }
-   console.log(map);
    
-   console.log(`${bulls}A${cows}B`);
+    console.log(`${bulls}A${cows}B`);
+
+    return `${bulls}A${cows}B`; 
 }
 
 getHint("1123", "0111");
